@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="walker_tienkung_vv_description">
+  <link
+    name="pelvis">
+    <inertial>
+      <origin
+        xyz="-0.000314698113086002 0.000146155597162641 -0.0580410519105974"
+        rpy="0 0 0" />
+      <mass
+        value="2.01628202117527" />
+      <inertia
+        ixx="0.00558353467126573"
+        ixy="0.000304973637733987"
+        ixz="1.52521910330684E-06"
+        iyy="0.0068769529914571"
+        iyz="4.14635462158437E-05"
+        izz="0.00700881898958364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/pelvis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/pelvis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hip_roll_l_link">
+    <inertial>
+      <origin
+        xyz="0.000919450191800016 0.0572719139837816 -0.036535021735144"
+        rpy="0 0 0" />
+      <mass
+        value="1.23732039924563" />
+      <inertia
+        ixx="0.0016927500689674"
+        ixy="-0.000278323986811228"
+        ixz="0.000223481878326374"
+        iyy="0.00586310404745946"
+        iyz="-0.000391779790020835"
+        izz="0.00588385612644648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_roll_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_roll_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_roll_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.028 -0.0857"
+      rpy="0 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="hip_roll_l_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_pitch_l_link">
+    <inertial>
+      <origin
+        xyz="0.00418859920800491 0.00150410212063076 -0.0499109668434261"
+        rpy="0 0 0" />
+      <mass
+        value="1.00928417763062" />
+      <inertia
+        ixx="0.00226953968853705"
+        ixy="3.4669004767929E-06"
+        ixz="-1.93373593276721E-05"
+        iyy="0.00475915581140273"
+        iyz="6.10547068876304E-05"
+        izz="0.00361243449652642" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_pitch_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_pitch_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.122 -0.046"
+      rpy="0 0 0" />
+    <parent
+      link="hip_roll_l_link" />
+    <child
+      link="hip_pitch_l_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_yaw_l_link">
+    <inertial>
+      <origin
+        xyz="0.0103540120249045 -0.00530604018612879 -0.128897968242103"
+        rpy="0 0 0" />
+      <mass
+        value="4.39483809944207" />
+      <inertia
+        ixx="0.0342475434593585"
+        ixy="0.000156771142618084"
+        ixz="0.000544185884763633"
+        iyy="0.0436615521725374"
+        iyz="2.08220336248018E-05"
+        izz="0.0121974384261057" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_yaw_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_yaw_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_yaw_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.00015 -0.0987"
+      rpy="0 0 0" />
+    <parent
+      link="hip_pitch_l_link" />
+    <child
+      link="hip_yaw_l_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="knee_pitch_l_link">
+    <inertial>
+      <origin
+        xyz="0.00977348214743748 0.00189286306082959 -0.154096121331005"
+        rpy="0 0 0" />
+      <mass
+        value="1.37885535677751" />
+      <inertia
+        ixx="0.0233998240636598"
+        ixy="1.49714642991773E-05"
+        ixz="0.00106049297051654"
+        iyy="0.02390814936669"
+        iyz="0.00046006704967956"
+        izz="0.00112648089494384" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/knee_pitch_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/knee_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_pitch_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00010715 -0.3013"
+      rpy="0 0 0" />
+    <parent
+      link="hip_yaw_l_link" />
+    <child
+      link="knee_pitch_l_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle_pitch_l_link">
+    <inertial>
+      <origin
+        xyz="1.22819315327577E-09 5.88561477332661E-10 -6.3948846218409E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.111608822288322" />
+      <inertia
+        ixx="7.91093390231636E-06"
+        ixy="-9.12165359677767E-18"
+        ixz="8.55507493327171E-12"
+        iyy="7.91093390230623E-06"
+        iyz="-2.59346326782665E-11"
+        izz="1.20892451422291E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_pitch_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle_pitch_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="0 0 0" />
+    <parent
+      link="knee_pitch_l_link" />
+    <child
+      link="ankle_pitch_l_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle_roll_l_link">
+    <inertial>
+      <origin
+        xyz="0.0144388129280165 1.46898482461522E-07 -0.0306432167135651"
+        rpy="0 0 0" />
+      <mass
+        value="0.706612200470462" />
+      <inertia
+        ixx="0.000521077739264845"
+        ixy="-2.6263654027731E-08"
+        ixz="-0.000152845028974065"
+        iyy="0.0031503209467847"
+        iyz="-5.8135641478801E-10"
+        izz="0.00341487321385917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_roll_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_roll_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle_roll_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ankle_pitch_l_link" />
+    <child
+      link="ankle_roll_l_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_roll_r_link">
+    <inertial>
+      <origin
+        xyz="-0.000922502756278714 -0.0572719123622103 -0.0365297555006445"
+        rpy="0 0 0" />
+      <mass
+        value="1.23732067448595" />
+      <inertia
+        ixx="0.00169275016438444"
+        ixy="-0.000278323803058568"
+        ixz="-0.000223493143559199"
+        iyy="0.00586310553384015"
+        iyz="0.000391779864042873"
+        izz="0.00588385760377364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_roll_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_roll_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_roll_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.028 -0.0857"
+      rpy="0 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="hip_roll_r_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_pitch_r_link">
+    <inertial>
+      <origin
+        xyz="0.00357505714163093 -0.01002874798767 -0.0405260603438964"
+        rpy="0 0 0" />
+      <mass
+        value="1.24327834411987" />
+      <inertia
+        ixx="0.00306250597443073"
+        ixy="-3.42905662535296E-06"
+        ixz="-4.81067341746619E-05"
+        iyy="0.00594632220716022"
+        iyz="0.000112752154127276"
+        izz="0.00426108757923478" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_pitch_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_pitch_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.122 -0.046"
+      rpy="0 0 0" />
+    <parent
+      link="hip_roll_r_link" />
+    <child
+      link="hip_pitch_r_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="hip_yaw_r_link">
+    <inertial>
+      <origin
+        xyz="0.0108657934847858 0.00512609147816487 -0.125792089596934"
+        rpy="0 0 0" />
+      <mass
+        value="2.18664263119094" />
+      <inertia
+        ixx="0.0169072969588581"
+        ixy="-7.77506368672042E-05"
+        ixz="0.000223078682561433"
+        iyy="0.0215376557162319"
+        iyz="-1.14243268812287E-05"
+        izz="0.00600784135856459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_yaw_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/hip_yaw_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_yaw_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0987"
+      rpy="0 0 0" />
+    <parent
+      link="hip_pitch_r_link" />
+    <child
+      link="hip_yaw_r_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="knee_pitch_r_link">
+    <inertial>
+      <origin
+        xyz="0.00976039593167336 -0.00195855402761172 -0.15485018687258"
+        rpy="0 0 0" />
+      <mass
+        value="1.38887493856293" />
+      <inertia
+        ixx="0.0233979939300823"
+        ixy="-1.4934606121996E-05"
+        ixz="0.00106013796263767"
+        iyy="0.0239064491144125"
+        iyz="-0.000459781228846009"
+        izz="0.00112658427758388" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/knee_pitch_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/knee_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_pitch_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0010999 -0.3013"
+      rpy="0 0 0" />
+    <parent
+      link="hip_yaw_r_link" />
+    <child
+      link="knee_pitch_r_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle_pitch_r_link">
+    <inertial>
+      <origin
+        xyz="1.23189814312233E-09 5.88333104456495E-10 -4.88288631750322E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.111608822288321" />
+      <inertia
+        ixx="7.91093390231634E-06"
+        ixy="-4.51242954346441E-18"
+        ixz="8.55507589525009E-12"
+        iyy="7.91093390233538E-06"
+        iyz="-2.81884094893185E-11"
+        izz="1.20892451421998E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_pitch_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle_pitch_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="0 0 0" />
+    <parent
+      link="knee_pitch_r_link" />
+    <child
+      link="ankle_pitch_r_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ankle_roll_r_link">
+    <inertial>
+      <origin
+        xyz="0.026359892836309 -8.62601913176331E-07 -0.031330052181934"
+        rpy="0 0 0" />
+      <mass
+        value="1.07636084523927" />
+      <inertia
+        ixx="0.000816238559624131"
+        ixy="-1.17907085270797E-07"
+        ixz="-0.000239317769287131"
+        iyy="0.00533005035622352"
+        iyz="5.51959631702985E-09"
+        izz="0.00584682567497041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_roll_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/ankle_roll_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle_roll_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ankle_pitch_r_link" />
+    <child
+      link="ankle_roll_r_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="body_yaw_link">
+    <inertial>
+      <origin
+        xyz="0.00879963692001472 -0.00036830954857288 0.260865132659209"
+        rpy="0 0 0" />
+      <mass
+        value="12.0801700666556" />
+      <inertia
+        ixx="0.0865785045820782"
+        ixy="4.00631319615669E-05"
+        ixz="-0.00179511827795625"
+        iyy="0.0621890047502719"
+        iyz="0.000167206827410468"
+        izz="0.0507966264041142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/body_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/body_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="body_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="body_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_pitch_l_link">
+    <inertial>
+      <origin
+        xyz="-1.51283396276514E-05 0.0601171806935812 0.000460494764233266"
+        rpy="0 0 0" />
+      <mass
+        value="0.170590564917582" />
+      <inertia
+        ixx="0.000209621932875684"
+        ixy="4.81408845109157E-05"
+        ixz="-1.2359066703917E-06"
+        iyy="0.000152454313149"
+        iyz="-1.98924935724453E-06"
+        izz="0.000181823274062902" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_pitch_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_pitch_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.14034 0.37677"
+      rpy="0.087266 0 0" />
+    <parent
+      link="body_yaw_link" />
+    <child
+      link="shoulder_pitch_l_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_roll_l_link">
+    <inertial>
+      <origin
+        xyz="0.00853873505110731 -0.0134623710658917 -0.0239963255325807"
+        rpy="0 0 0" />
+      <mass
+        value="0.610322528433143" />
+      <inertia
+        ixx="0.00127181485723417"
+        ixy="0.000138316884527414"
+        ixz="9.76347303976402E-05"
+        iyy="0.00103808772671"
+        iyz="1.80799526745838E-05"
+        izz="0.00077033598473156" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_roll_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_roll_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_roll_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.073 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_pitch_l_link" />
+    <child
+      link="shoulder_roll_l_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_yaw_l_link">
+    <inertial>
+      <origin
+        xyz="0.00467065599996587 0.000860105516531484 -0.0684032974883744"
+        rpy="0 0 0" />
+      <mass
+        value="0.339150759296429" />
+      <inertia
+        ixx="0.00119619243564983"
+        ixy="-5.03941199873571E-06"
+        ixz="-9.38319970773105E-05"
+        iyy="0.00122680506839109"
+        iyz="2.65558006453455E-05"
+        izz="0.000407569995266982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_yaw_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_yaw_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_yaw_l_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.13"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_roll_l_link" />
+    <child
+      link="shoulder_yaw_l_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow_pitch_l_link">
+    <inertial>
+      <origin
+        xyz="-0.0190718361070142 3.05887832923735E-05 -0.195439858297766"
+        rpy="0 0 0" />
+      <mass
+        value="0.553797243176773" />
+      <inertia
+        ixx="0.00150475389055533"
+        ixy="-1.43273608944438E-07"
+        ixz="1.18497247835071E-05"
+        iyy="0.00156348641492305"
+        iyz="-1.1229292977002E-06"
+        izz="0.000372537268822332" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/elbow_pitch_l_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/elbow_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_pitch_l_joint"
+    type="revolute">
+    <origin
+      xyz="0.019998 0 -0.15"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_yaw_l_link" />
+    <child
+      link="elbow_pitch_l_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_pitch_r_link">
+    <inertial>
+      <origin
+        xyz="-1.52599758197161E-05 -0.0601179324323542 0.00046005393028753"
+        rpy="0 0 0" />
+      <mass
+        value="0.170561877495496" />
+      <inertia
+        ixx="0.000209609536590914"
+        ixy="-4.81447149830795E-05"
+        ixz="-1.23894769177556E-06"
+        iyy="0.000152442858529651"
+        iyz="1.99829703033515E-06"
+        izz="0.000181821878804263" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_pitch_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_pitch_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.14034 0.37677"
+      rpy="-0.087266 0 0" />
+    <parent
+      link="body_yaw_link" />
+    <child
+      link="shoulder_pitch_r_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_roll_r_link">
+    <inertial>
+      <origin
+        xyz="0.00855591711760435 0.0134531894389444 -0.0240081155158422"
+        rpy="0 0 0" />
+      <mass
+        value="0.610030371394207" />
+      <inertia
+        ixx="0.00127164606804066"
+        ixy="-0.000138275723219182"
+        ixz="9.76177516779607E-05"
+        iyy="0.00103741064276893"
+        iyz="-1.83217304329298E-05"
+        izz="0.000769838465968771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_roll_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_roll_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_roll_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.073 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_pitch_r_link" />
+    <child
+      link="shoulder_roll_r_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulder_yaw_r_link">
+    <inertial>
+      <origin
+        xyz="0.00467509374396711 -0.000861697247363735 -0.0684112576759473"
+        rpy="0 0 0" />
+      <mass
+        value="0.339113578191921" />
+      <inertia
+        ixx="0.0011960128480415"
+        ixy="5.0456597986902E-06"
+        ixz="-9.37325817832445E-05"
+        iyy="0.00122662284309278"
+        iyz="-2.65525240805958E-05"
+        izz="0.00040752658607188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_yaw_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/shoulder_yaw_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_yaw_r_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.13"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_roll_r_link" />
+    <child
+      link="shoulder_yaw_r_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow_pitch_r_link">
+    <inertial>
+      <origin
+        xyz="-0.0190765071411235 -2.97962655956274E-05 -0.195434369409312"
+        rpy="0 0 0" />
+      <mass
+        value="0.553803271667151" />
+      <inertia
+        ixx="0.00150475844107614"
+        ixy="1.36177457430984E-07"
+        ixz="1.18419416514189E-05"
+        iyy="0.0015634941036692"
+        iyz="1.12270908696277E-06"
+        izz="0.000372541133231739" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/elbow_pitch_r_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://walker_tienkung_vv_description/meshes/elbow_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_pitch_r_joint"
+    type="revolute">
+    <origin
+      xyz="0.020003 0 -0.15"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_yaw_r_link" />
+    <child
+      link="elbow_pitch_r_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
